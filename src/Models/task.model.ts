@@ -15,13 +15,34 @@ export interface ITask extends Document {
 }
 
 const TaskSchema = new Schema<ITask>({
-  title: { type: String, required: [true, "title is required"] },
-  description: { type: String },
-  dueDate: { type: Date },
-  priority: { type: String, enum: ['Low', 'Medium', 'High'], default: 'Medium' },
-  isComplete: { type: Boolean, default: false },
-  project: { type: Schema.Types.ObjectId, ref: 'Project', required: true },
-  assignee: { type: Schema.Types.ObjectId, ref: 'User' }
+  title: { 
+    type: String, 
+    required: [true, "title is required"] 
+  },
+  description: { 
+    type: String 
+  },
+  dueDate: { 
+    type: Date 
+  },
+  priority: { 
+    type: String, 
+    enum: ['Low', 'Medium', 'High'], 
+    default: 'Medium' 
+  },
+  isComplete: { 
+    type: Boolean, 
+    default: false 
+  },
+  project: { 
+    type: Schema.Types.ObjectId, 
+    ref: 'Project', 
+    required: true 
+  },
+  assignee: { 
+    type: Schema.Types.ObjectId, 
+    ref: 'User' 
+  }
 }, 
 { timestamps: true });
 
