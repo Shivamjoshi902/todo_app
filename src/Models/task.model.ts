@@ -22,7 +22,8 @@ const TaskSchema = new Schema<ITask>({
   isComplete: { type: Boolean, default: false },
   project: { type: Schema.Types.ObjectId, ref: 'Project', required: true },
   assignee: { type: Schema.Types.ObjectId, ref: 'User' }
-}, { timestamps: true });
+}, 
+{ timestamps: true });
 
 const Task = mongoose.models.Task as mongoose.Model<ITask> || model<ITask>('Task', TaskSchema);
 export default Task;
