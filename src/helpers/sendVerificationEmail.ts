@@ -1,8 +1,8 @@
 // Import dependencies
 import mailgun from 'mailgun-js';
 import { apiResponse } from './response';
-const DOMAIN = 'sandbox983cdfa61ebd4763809eb851ce1c694f.mailgun.org'; 
-const api_key = '26712b6e8349a8df1123e10656e0928e-1b5736a5-bd286256'; 
+const DOMAIN = process.env.DOMAIN || ''; 
+const api_key = process.env.API_KEY || '';
 
 const mg = mailgun({ apiKey: api_key, domain: DOMAIN });
 
