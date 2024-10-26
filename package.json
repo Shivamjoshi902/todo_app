@@ -9,13 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
     "dotenv": "^16.4.5",
+    "mailgun-js": "^0.22.0",
+    "mailgun.js": "^10.2.3",
     "mongoose": "^8.6.3",
     "next": "14.2.13",
+    "next-auth": "^4.24.8",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/mailgun-js": "^0.22.18",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
